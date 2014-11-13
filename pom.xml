@@ -4,7 +4,7 @@
 
 	<groupId>cn.songxinqiang</groupId>
 	<artifactId>oss-parent</artifactId>
-	<version>1.2_java7</version>
+	<version>1.2_java8</version>
 	<packaging>pom</packaging>
 
 	<name>OSSParent</name>
@@ -34,8 +34,8 @@
 	</scm>
 
 	<properties>
-		<version.java-compile>1.7</version.java-compile>
-		<version.javadoc>7</version.javadoc>
+		<version.java-compile>1.8</version.java-compile>
+		<version.javadoc>8</version.javadoc>
 
 		<version.maven-compiler-plugin>3.2</version.maven-compiler-plugin>
 		<version.maven-source-plugin>2.4</version.maven-source-plugin>
