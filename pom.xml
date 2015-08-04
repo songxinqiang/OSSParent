@@ -4,7 +4,7 @@
 
 	<groupId>cn.songxinqiang</groupId>
 	<artifactId>oss-parent</artifactId>
-	<version>1.3</version>
+	<version>1.4</version>
 	<packaging>pom</packaging>
 
 	<name>OSSParent</name>
@@ -37,10 +37,11 @@
 		<version.java-compile>1.8</version.java-compile>
 		<version.javadoc>8</version.javadoc>
 
-		<version.maven-compiler-plugin>3.2</version.maven-compiler-plugin>
+		<version.maven-compiler-plugin>3.3</version.maven-compiler-plugin>
 		<version.maven-source-plugin>2.4</version.maven-source-plugin>
-		<version.maven-javadoc-plugin>2.10.1</version.maven-javadoc-plugin>
-		<version.maven-gpg-plugin>1.5</version.maven-gpg-plugin>
+		<version.maven-javadoc-plugin>2.10.3</version.maven-javadoc-plugin>
+		<version.maven-gpg-plugin>1.6</version.maven-gpg-plugin>
+		<version.maven-war-plugin>2.6</version.maven-war-plugin>
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -56,6 +57,11 @@
 					<source>${version.java-compile}</source>
 					<target>${version.java-compile}</target>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>${version.maven-war-plugin}</version>
 			</plugin>
 		</plugins>
 	</build>
