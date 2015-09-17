@@ -4,7 +4,7 @@
 
 	<groupId>cn.songxinqiang</groupId>
 	<artifactId>oss-parent</artifactId>
-	<version>1.4</version>
+	<version>1.5</version>
 	<packaging>pom</packaging>
 
 	<name>OSSParent</name>
@@ -28,9 +28,9 @@
 	</developers>
 
 	<scm>
-		<connection>scm:git:git@git.oschina.net:songxinqiang/OSSParent.git</connection>
-		<developerConnection>scm:git:git@git.oschina.net:songxinqiang/OSSParent.git</developerConnection>
-		<url>git@git.oschina.net:songxinqiang/OSSParent.git</url>
+		<connection>scm:git:ssh://git@git.oschina.net/songxinqiang/OSSParent.git</connection>
+		<developerConnection>scm:git:ssh://git@git.oschina.net/songxinqiang/OSSParent.git</developerConnection>
+		<url>https://git.oschina.net/songxinqiang/OSSParent</url>
 	</scm>
 
 	<properties>
