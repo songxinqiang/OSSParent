@@ -30,8 +30,8 @@
     </developers>
 
     <scm>
-        <connection>scm:git:ssh://git@git.oschina.net/songxinqiang/OSSParent.git</connection>
-        <developerConnection>scm:git:ssh://git@git.oschina.net/songxinqiang/OSSParent.git</developerConnection>
+        <connection>scm:git:git@git.oschina.net:songxinqiang/OSSParent.git</connection>
+        <developerConnection>scm:git:git@git.oschina.net:songxinqiang/OSSParent.git</developerConnection>
         <url>https://git.oschina.net/songxinqiang/OSSParent</url>
     </scm>
 
