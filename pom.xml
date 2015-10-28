@@ -10,7 +10,8 @@
     <packaging>pom</packaging>
 
     <name>OSSParent</name>
-    <description>This is the common settings for maven projects to publish to Maven Central Repository,artifacts extend from this one can publish to the repo without any setting.</description>
+    <description>This is the common settings for maven projects to publish to Maven Central Repository,
+    artifacts extend from this one can publish to the repo without any setting.</description>
     <url>https://git.oschina.net/songxinqiang/OSSParent</url>
 
     <licenses>
@@ -36,14 +37,14 @@
     </scm>
 
     <properties>
-        <version.java-compile>1.8</version.java-compile>
+        <version.java>1.8</version.java>
         <version.javadoc>8</version.javadoc>
 
-        <version.maven-compiler-plugin>3.3</version.maven-compiler-plugin>
-        <version.maven-source-plugin>2.4</version.maven-source-plugin>
-        <version.maven-javadoc-plugin>2.10.3</version.maven-javadoc-plugin>
-        <version.maven-gpg-plugin>1.6</version.maven-gpg-plugin>
-        <version.maven-war-plugin>2.6</version.maven-war-plugin>
+        <version.compiler-plugin>3.3</version.compiler-plugin>
+        <version.war-plugin>2.6</version.war-plugin>
+        <version.source-plugin>2.4</version.source-plugin>
+        <version.javadoc-plugin>2.10.3</version.javadoc-plugin>
+        <version.gpg-plugin>1.6</version.gpg-plugin>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -54,16 +55,16 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>${version.maven-compiler-plugin}</version>
+                <version>${version.compiler-plugin}</version>
                 <configuration>
-                    <source>${version.java-compile}</source>
-                    <target>${version.java-compile}</target>
+                    <source>${version.java}</source>
+                    <target>${version.java}</target>
                 </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>${version.maven-war-plugin}</version>
+                <version>${version.war-plugin}</version>
                 <configuration>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
@@ -79,7 +80,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-source-plugin</artifactId>
-                        <version>${version.maven-source-plugin}</version>
+                        <version>${version.source-plugin}</version>
                         <executions>
                             <execution>
                                 <id>attach-sources</id>
@@ -95,7 +96,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-javadoc-plugin</artifactId>
-                        <version>${version.maven-javadoc-plugin}</version>
+                        <version>${version.javadoc-plugin}</version>
                         <executions>
                             <execution>
                                 <phase>package</phase>
@@ -113,7 +114,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
-                        <version>${version.maven-gpg-plugin}</version>
+                        <version>${version.gpg-plugin}</version>
                         <executions>
                             <execution>
                                 <phase>install</phase>
@@ -126,13 +127,67 @@
                 </plugins>
             </build>
             <distributionManagement>
-                <snapshotRepository>
-                    <id>oss</id>
-                    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-                </snapshotRepository>
                 <repository>
                     <id>oss</id>
                     <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+                </repository>
+            </distributionManagement>
+        </profile>
+        <profile>
+            <id>release197</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <version>${version.source-plugin}</version>
+                        <executions>
+                            <execution>
+                                <id>attach-sources</id>
+                                <goals>
+                                    <goal>jar-no-fork</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <attach>true</attach>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+            <distributionManagement>
+                <repository>
+                    <id>nexus-197</id>
+                    <url>http://192.168.1.197:8081/content/repositories/releases</url>
+                </repository>
+            </distributionManagement>
+        </profile>
+        <profile>
+            <id>snapshot197</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <version>${version.source-plugin}</version>
+                        <executions>
+                            <execution>
+                                <id>attach-sources</id>
+                                <goals>
+                                    <goal>jar-no-fork</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <attach>true</attach>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+            <distributionManagement>
+                <repository>
+                    <id>nexus-197</id>
+                    <url>http://192.168.1.197:8081/content/repositories/snapshots/</url>
                 </repository>
             </distributionManagement>
         </profile>
