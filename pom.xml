@@ -39,13 +39,13 @@
         <version.java>1.8</version.java>
         <version.javadoc>8</version.javadoc>
 
-        <version.compiler-plugin>3.3</version.compiler-plugin>
+        <version.compiler-plugin>3.5.1</version.compiler-plugin>
         <version.war-plugin>2.6</version.war-plugin>
         <version.clean-plugin>3.0.0</version.clean-plugin>
         <version.resources-plugin>2.7</version.resources-plugin>
-        <version.surefire-plugin>2.19</version.surefire-plugin>
+        <version.surefire-plugin>2.19.1</version.surefire-plugin>
         <version.jar-plugin>2.6</version.jar-plugin>
-        <version.source-plugin>2.4</version.source-plugin>
+        <version.source-plugin>3.0.0</version.source-plugin>
         <version.javadoc-plugin>2.10.3</version.javadoc-plugin>
         <version.gpg-plugin>1.6</version.gpg-plugin>
 
