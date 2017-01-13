@@ -3,7 +3,7 @@
 
     <groupId>cn.songxinqiang</groupId>
     <artifactId>oss-parent</artifactId>
-    <version>1.6</version>
+    <version>1.7</version>
     <packaging>pom</packaging>
 
     <name>OSSParent</name>
@@ -39,14 +39,14 @@
         <version.java>1.8</version.java>
         <version.javadoc>8</version.javadoc>
 
-        <version.compiler-plugin>3.5.1</version.compiler-plugin>
-        <version.war-plugin>2.6</version.war-plugin>
+        <version.compiler-plugin>3.6.0</version.compiler-plugin>
+        <version.war-plugin>3.0.0</version.war-plugin>
         <version.clean-plugin>3.0.0</version.clean-plugin>
-        <version.resources-plugin>2.7</version.resources-plugin>
+        <version.resources-plugin>3.0.2</version.resources-plugin>
         <version.surefire-plugin>2.19.1</version.surefire-plugin>
-        <version.jar-plugin>2.6</version.jar-plugin>
-        <version.source-plugin>3.0.0</version.source-plugin>
-        <version.javadoc-plugin>2.10.3</version.javadoc-plugin>
+        <version.jar-plugin>3.0.2</version.jar-plugin>
+        <version.source-plugin>3.0.1</version.source-plugin>
+        <version.javadoc-plugin>2.10.4</version.javadoc-plugin>
         <version.gpg-plugin>1.6</version.gpg-plugin>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
