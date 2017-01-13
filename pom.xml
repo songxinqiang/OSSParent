@@ -3,7 +3,7 @@
 
     <groupId>cn.songxinqiang</groupId>
     <artifactId>oss-parent</artifactId>
-    <version>1.7</version>
+    <version>1.7.1</version>
     <packaging>pom</packaging>
 
     <name>OSSParent</name>
@@ -40,7 +40,7 @@
         <version.javadoc>8</version.javadoc>
 
         <version.compiler-plugin>3.6.0</version.compiler-plugin>
-        <version.war-plugin>3.0.0</version.war-plugin>
+        <version.war-plugin>2.6</version.war-plugin>
         <version.clean-plugin>3.0.0</version.clean-plugin>
         <version.resources-plugin>3.0.2</version.resources-plugin>
         <version.surefire-plugin>2.19.1</version.surefire-plugin>
