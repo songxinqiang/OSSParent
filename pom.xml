@@ -3,13 +3,12 @@
 
     <groupId>cn.songxinqiang</groupId>
     <artifactId>oss-parent</artifactId>
-    <version>1.7.1</version>
+    <version>1.8.0</version>
     <packaging>pom</packaging>
 
     <name>OSSParent</name>
     <description>
-        This is the common settings for maven projects to publish to Maven Central Repository,
-        artifacts extend from this one can publish to the repo without any setting.
+        maven项目的基本设置，打包的参数，发布到中央仓库的必要设置,项目继承之后不需要单独重复的配置.
     </description>
     <url>https://git.oschina.net/songxinqiang/OSSParent</url>
 
@@ -24,7 +23,7 @@
         <developer>
             <name>阿信sxq</name>
             <email>songxinqiang@vip.qq.com</email>
-            <url>http://my.oschina.net/songxinqiang/</url>
+            <url>https://my.oschina.net/songxinqiang/</url>
             <timezone>+8</timezone>
         </developer>
     </developers>
@@ -36,18 +35,18 @@
     </scm>
 
     <properties>
-        <version.java>1.8</version.java>
-        <version.javadoc>8</version.javadoc>
+        <java.version>1.8</java.version>
+        <javadoc.version>8</javadoc.version>
 
-        <version.compiler-plugin>3.6.0</version.compiler-plugin>
-        <version.war-plugin>2.6</version.war-plugin>
-        <version.clean-plugin>3.0.0</version.clean-plugin>
-        <version.resources-plugin>3.0.2</version.resources-plugin>
-        <version.surefire-plugin>2.19.1</version.surefire-plugin>
-        <version.jar-plugin>3.0.2</version.jar-plugin>
-        <version.source-plugin>3.0.1</version.source-plugin>
-        <version.javadoc-plugin>2.10.4</version.javadoc-plugin>
-        <version.gpg-plugin>1.6</version.gpg-plugin>
+        <compiler-plugin.version>3.6.0</compiler-plugin.version>
+        <war-plugin.version>2.6</war-plugin.version>
+        <clean-plugin.version>3.0.0</clean-plugin.version>
+        <resources-plugin.version>3.0.2</resources-plugin.version>
+        <surefire-plugin.version>2.19.1</surefire-plugin.version>
+        <jar-plugin.version>3.0.2</jar-plugin.version>
+        <source-plugin.version>3.0.1</source-plugin.version>
+        <javadoc-plugin.version>2.10.4</javadoc-plugin.version>
+        <gpg-plugin.version>1.6</gpg-plugin.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -58,21 +57,21 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>${version.compiler-plugin}</version>
+                <version>${compiler-plugin.version}</version>
                 <configuration>
-                    <source>${version.java}</source>
-                    <target>${version.java}</target>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
                 </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>${version.jar-plugin}</version>
+                <version>${jar-plugin.version}</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>${version.war-plugin}</version>
+                <version>${war-plugin.version}</version>
                 <configuration>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
@@ -80,17 +79,17 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-clean-plugin</artifactId>
-                <version>${version.clean-plugin}</version>
+                <version>${clean-plugin.version}</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
-                <version>${version.resources-plugin}</version>
+                <version>${resources-plugin.version}</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>${version.surefire-plugin}</version>
+                <version>${surefire-plugin.version}</version>
             </plugin>
         </plugins>
     </build>
@@ -103,7 +102,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-source-plugin</artifactId>
-                        <version>${version.source-plugin}</version>
+                        <version>${source-plugin.version}</version>
                         <executions>
                             <execution>
                                 <id>attach-sources</id>
@@ -119,7 +118,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-javadoc-plugin</artifactId>
-                        <version>${version.javadoc-plugin}</version>
+                        <version>${javadoc-plugin.version}</version>
                         <executions>
                             <execution>
                                 <phase>package</phase>
@@ -130,14 +129,14 @@
                         </executions>
                         <configuration>
                             <links>
-                                <link>http://docs.oracle.com/javase/${version.javadoc}/docs/api</link>
+                                <link>http://docs.oracle.com/javase/${javadoc.version}/docs/api</link>
                             </links>
                         </configuration>
                     </plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
-                        <version>${version.gpg-plugin}</version>
+                        <version>${gpg-plugin.version}</version>
                         <executions>
                             <execution>
                                 <phase>install</phase>
@@ -163,7 +162,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-source-plugin</artifactId>
-                        <version>${version.source-plugin}</version>
+                        <version>${source-plugin.version}</version>
                         <executions>
                             <execution>
                                 <id>attach-sources</id>
@@ -181,7 +180,7 @@
             <distributionManagement>
                 <repository>
                     <id>nexus-197</id>
-                    <url>http://192.168.1.197:8081/content/repositories/releases</url>
+                    <url>http://192.168.11.197:8081/content/repositories/releases</url>
                 </repository>
             </distributionManagement>
         </profile>
@@ -192,7 +191,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-source-plugin</artifactId>
-                        <version>${version.source-plugin}</version>
+                        <version>${source-plugin.version}</version>
                         <executions>
                             <execution>
                                 <id>attach-sources</id>
@@ -210,7 +209,7 @@
             <distributionManagement>
                 <repository>
                     <id>nexus-197</id>
-                    <url>http://192.168.1.197:8081/content/repositories/snapshots/</url>
+                    <url>http://192.168.11.197:8081/content/repositories/snapshots/</url>
                 </repository>
             </distributionManagement>
         </profile>
