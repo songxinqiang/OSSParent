@@ -38,11 +38,11 @@
         <java.version>1.8</java.version>
         <javadoc.version>8</javadoc.version>
 
-        <compiler-plugin.version>3.6.0</compiler-plugin.version>
-        <war-plugin.version>2.6</war-plugin.version>
+        <compiler-plugin.version>3.6.2</compiler-plugin.version>
+        <war-plugin.version>3.1.0</war-plugin.version>
         <clean-plugin.version>3.0.0</clean-plugin.version>
         <resources-plugin.version>3.0.2</resources-plugin.version>
-        <surefire-plugin.version>2.19.1</surefire-plugin.version>
+        <surefire-plugin.version>2.20</surefire-plugin.version>
         <jar-plugin.version>3.0.2</jar-plugin.version>
         <source-plugin.version>3.0.1</source-plugin.version>
         <javadoc-plugin.version>2.10.4</javadoc-plugin.version>
@@ -181,35 +181,6 @@
                 <repository>
                     <id>nexus-197</id>
                     <url>http://192.168.11.197:8081/content/repositories/releases</url>
-                </repository>
-            </distributionManagement>
-        </profile>
-        <profile>
-            <id>snapshot197</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-source-plugin</artifactId>
-                        <version>${source-plugin.version}</version>
-                        <executions>
-                            <execution>
-                                <id>attach-sources</id>
-                                <goals>
-                                    <goal>jar-no-fork</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                        <configuration>
-                            <attach>true</attach>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-            <distributionManagement>
-                <repository>
-                    <id>nexus-197</id>
-                    <url>http://192.168.11.197:8081/content/repositories/snapshots/</url>
                 </repository>
             </distributionManagement>
         </profile>
