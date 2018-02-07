@@ -4,14 +4,14 @@
 
     <groupId>cn.songxinqiang</groupId>
     <artifactId>oss-parent</artifactId>
-    <version>1.8.2</version>
+    <version>1.9.0</version>
     <packaging>pom</packaging>
 
     <name>OSSParent</name>
     <description>
         maven项目的基本设置，打包的参数，发布到中央仓库的必要设置,项目继承之后不需要单独重复的配置.
     </description>
-    <url>https://git.oschina.net/songxinqiang/OSSParent</url>
+    <url>https://gitee.com/songxinqiang/OSSParent</url>
 
     <licenses>
         <license>
@@ -30,19 +30,19 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git@git.oschina.net:songxinqiang/OSSParent.git</connection>
-        <developerConnection>scm:git:git@git.oschina.net:songxinqiang/OSSParent.git</developerConnection>
-        <url>https://git.oschina.net/songxinqiang/OSSParent</url>
+        <connection>scm:git:git@gitee.com:songxinqiang/OSSParent.git</connection>
+        <developerConnection>scm:git:git@gitee.com:songxinqiang/OSSParent.git</developerConnection>
+        <url>https://gitee.com/songxinqiang/OSSParent</url>
     </scm>
 
     <properties>
         <java.version>1.8</java.version>
         <javadoc.version>8</javadoc.version>
 
-        <compiler-plugin.version>3.6.2</compiler-plugin.version>
-        <war-plugin.version>2.6</war-plugin.version>
+        <compiler-plugin.version>3.7.0</compiler-plugin.version>
+        <war-plugin.version>3.2.0</war-plugin.version>
         <source-plugin.version>3.0.1</source-plugin.version>
-        <javadoc-plugin.version>2.10.4</javadoc-plugin.version>
+        <javadoc-plugin.version>3.0.0</javadoc-plugin.version>
         <gpg-plugin.version>1.6</gpg-plugin.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -106,7 +106,7 @@
                         </executions>
                         <configuration>
                             <links>
-                                <link>http://docs.oracle.com/javase/${javadoc.version}/docs/api</link>
+                                <link>https://docs.oracle.com/javase/${javadoc.version}/docs/api</link>
                             </links>
                         </configuration>
                     </plugin>
@@ -129,53 +129,6 @@
                 <repository>
                     <id>oss</id>
                     <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-                </repository>
-            </distributionManagement>
-        </profile>
-        <profile>
-            <id>release197</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-source-plugin</artifactId>
-                        <version>${source-plugin.version}</version>
-                        <executions>
-                            <execution>
-                                <id>attach-sources</id>
-                                <goals>
-                                    <goal>jar-no-fork</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                        <configuration>
-                            <attach>true</attach>
-                        </configuration>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-javadoc-plugin</artifactId>
-                        <version>${javadoc-plugin.version}</version>
-                        <executions>
-                            <execution>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>jar</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                        <configuration>
-                            <links>
-                                <link>http://docs.oracle.com/javase/${javadoc.version}/docs/api</link>
-                            </links>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-            <distributionManagement>
-                <repository>
-                    <id>nexus-197</id>
-                    <url>http://192.168.11.197:8081/content/repositories/releases</url>
                 </repository>
             </distributionManagement>
         </profile>
